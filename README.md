@@ -1,8 +1,5 @@
 # 🎓 FATEC - Desenvolvimento de Software Multiplataforma (DSM)
-
 ## Disciplina: Banco de Dados Relacional (2º Semestre)
-
-. O foco principal é a administração, automação, segurança e otimização de bancos de dados, culminando no projeto de ecossistema para a startup fictícia de logística, a **XPTO Express**.
 
 ### 👨‍🎓 Aluno
 
@@ -11,70 +8,39 @@
 
 ---
 
-### 📂 Estrutura do Repositório (Por Conceitos)
+## 🚀 Competências Técnicas Desenvolvida
 
-#### 1. Fundamentos de Modelagem (DDL e DML)
+- Aplicação prática de conceitos no desenvolvimento de um ecossistema corporativo para a startup de logística XPTO Express.
 
-_Pasta: `/01-fundamentos-ddl-dml`_
+| Módulo / Área | Competência Técnica Desenvolvida | Principais Recursos / Comandos MySQL |
+| :--- | :--- | :--- |
+| **1. Modelagem (DDL/DML)** | Projeto de esquemas relacionais normalizados e garantia de integridade referencial entre entidades. | `CREATE DATABASE`, `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `INSERT` |
+| **2. Governança (DCL)** | Gestão de perfis de acesso e aplicação do princípio do privilégio mínimo na segurança da informação. | `GRANT`, `REVOKE`, Gerenciamento de Usuários |
+| **3. Abstração (Views)** | Simplificação de consultas complexas e blindagem de dados sensíveis de perfis não autorizados. | `CREATE VIEW` |
+| **4. Lógica Procedural (Procedures)** | Encapsulamento de rotinas operacionais, regras de negócio e tratamento de exceções transacionais. | `CREATE PROCEDURE`, `SIGNAL SQLSTATE`, Estruturas Condicionais (`IF/ELSE`) |
+| **5. Automação & Auditoria (Triggers)** | Gatilhos acoplados a eventos para automação de fluxos e rastreabilidade detalhada de logs. | `AFTER INSERT`, `AFTER DELETE`, `NEW.`, `OLD.`, `CURRENT_USER()` |
+| **6. Performance (Índices)** | Diagnóstico de gargalos em planos de execução e tunning para otimização de buscas. | `EXPLAIN`, `EXPLAIN ANALYZE`, `CREATE INDEX` |
+| **7. ETL & Processamento Volátil** | Higienização de strings e processamento analítico em memória para relatórios gerenciais. | `TEMPORARY TABLE`, `UPDATE JOIN`, Funções de Agregação (`SUM`) |
+| **8. Backup & Restore** | Geração e exportação de dumps transacionais consolidados para recuperação de desastres. | MySQL Server Dump |
 
-- `ddl_dml_setup_xpto_express.sql`: Setup completo do projeto XPTO Express, contemplando `CREATE DATABASE`, modelagem das tabelas com restrições de integridade (PK, FK, UNIQUE) e povoamento inicial (`INSERT`).
+---
 
-#### 2. Controle de Acesso e Governança (DCL)
+## 📂 Organização do Repositório (Mapeamento de Conceitos)
 
-_Pasta: `/02-controle-acesso-dcl`_
+Os scripts encontram-se estruturados em diretórios temáticos:
 
-- `dcl_admin_politicas_acesso.sql`: Criação do usuário 'aluno_b' e políticas de `GRANT`/`REVOKE` (Visão do DBA).
-- `dcl_teste_auditoria_permissoes.sql`: Testes de violação de acesso pelo usuário 'aluno_b'.
-- `dcl_permissoes_usuario_suporte.sql`: (Projeto XPTO Express) Criação do usuário de suporte de TI e delegação de acessos restritos a inserções na tabela de logs.
-
-#### 3. Abstração de Dados com Views
-
-_Pasta: `/03-views-paineis`_
-
-- `vw_empregado_restrito.sql`: Abstração para ocultar informações salariais de empregados.
-- `vw_painel_operacional_entregas.sql`: (Projeto XPTO Express) Painel de leitura simplificado para tracking de entregas.
-
-#### 4. Encapsulamento de Lógica (Stored Procedures)
-
-_Pasta: `/04-stored-procedures`_
-
-- `sp_registrar_saida_veiculo.sql`: (Projeto XPTO Express) Procedure robusta que valida a consistência do veículo e placa através de variáveis de ambiente e implementa tratamento de erro usando `SIGNAL SQLSTATE` em caso de divergências.
-
-#### 5. Automação e Auditoria (Triggers)
-
-_Pasta: `/05-triggers-e-auditoria`_
-
-- `trg_regras_negocio_vendas.sql`: Conjunto de triggers (`AFTER INSERT` e `AFTER DELETE`) responsáveis pelo abatimento automático de estoque e o recálculo de pontos do programa de fidelidade do cliente.
-- `trg_auditoria_exclusao_entregas.sql`: (Projeto XPTO Express) Trigger atrelada ao evento `AFTER DELETE` na tabela de entregas. Responsável por gravar um histórico detalhado da exclusão (old values) e identificar qual usuário (`CURRENT_USER()`) executou a ação na tabela de log.
-
-#### 6. Performance e Otimização de Consultas
-
-_Pasta: `/06-otimizacao-indices`_
-
-- `idx_otimizacao_performance_busca.sql`: Análise do plano de execução via `EXPLAIN` e criação de índice para otimizar pesquisas textuais de nomes de clientes.
-- `idx_otimizacao_placa_veiculo.sql`: (Projeto XPTO Express) Otimização estrutural baseada em `EXPLAIN` para agilizar a pesquisa pelas placas dos veículos no banco.
-
-#### 7. Processamento de Dados (Tabelas Temporárias)
-
-_Pasta: `/07-tabelas-temporarias`_
-
-- `etl_limpeza_dados_tabela_temporaria.sql`: Processo de higienização de strings através de uma `TEMPORARY TABLE` e subsequente `UPDATE JOIN` para atualização na tabela matriz.
-- `tmp_relatorio_fechamento_diario.sql`: (Projeto XPTO Express) Uso de tabela em memória volátil com funções de agregação matemáticas para o cálculo de frete bruto, impostos recolhidos e lucro líquido consolidado do dia.
-
-#### 8. Rotinas de Backup e Exportação
-
-_Pasta: `/08-backup-e-restore`_
-
-- `bkp_dump_xpto_express_completo.sql`: (Projeto XPTO Express) Dump completo e consistente gerado pelo servidor MySQL, preservando estrutura (DDL) e registros (DML) para cenários de disaster recovery.
+- **`/01-fundamentos-ddl-dml`**: Setup inicial, criação de tabelas e cargas de dados.
+- **`/02-controle-acesso-dcl`**: Gestão de perfis e governança de segurança de usuários.
+- **`/03-views-paineis`**: Abstrações para painéis operacionais e proteção de dados.
+- **`/04-stored-procedures`**: Lógica transacional encapsulada com tratamento de erros.
+- **`/05-triggers-e-auditoria`**: Gatilhos para automações de negócio e logs de auditoria.
+- **`/06-otimizacao-indices`**: Investigação de planos de execução e tunning com índices.
+- **`/07-tabelas-temporarias`**: Processamentos analíticos em memória e higienização (ETL).
+- **`/08-backup-e-restore`**: Dump estrutural e de dados da XPTO Express.
 
 ---
 
 ### 🛠️ Stack Tecnológico
-
 ```text
-- SGBD: MySQL Server 8.0 (InnoDB Engine)
-- DDL: Data Definition Language
-- DML: Data Manipulation Language
-- DCL: Data Control Language
-- Estruturas de Programação SQL: Triggers, Stored Procedures, Views e Índices.
-```
+- SGBD: MySQL Server 8.0 (Engine InnoDB)
+- Linguagens/Padrões: SQL (DDL, DML, DCL), Stored Procedures, Triggers, Views e Índices B-Tree.
