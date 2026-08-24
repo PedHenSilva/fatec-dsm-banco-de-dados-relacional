@@ -1,5 +1,4 @@
-# 🎓 FATEC - Desenvolvimento de Software Multiplataforma (DSM)
-## Disciplina: Banco de Dados Relacional (2º Semestre)
+# 🎓 FATEC - **Banco de Dados Relacional** (DSM)
 
 ### 👨‍🎓 Aluno
 
@@ -8,9 +7,10 @@
 
 ---
 
-## 🚀 Competências Técnicas Desenvolvida
+## 🚀 Competências Técnicas Desenvolvidas
 
-- Aplicação prática de conceitos no desenvolvimento de um ecossistema corporativo para a startup de logística XPTO Express.
+> - Aplicação prática em atividades e desenvolvimento de um ecossistema corporativo para a startup de logística XPTO Express. <br> <br>
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 | Módulo / Área | Competência Técnica Desenvolvida | Principais Recursos / Comandos MySQL |
 | :--- | :--- | :--- |
