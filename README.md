@@ -1,4 +1,4 @@
-# 🎓 FATEC - **Banco de Dados Relacional** (DSM)
+# FATEC - **Banco de Dados Relacional** (DSM)
 
 ### 👨‍🎓 Aluno
 
@@ -7,27 +7,14 @@
 
 ---
 
-## 🚀 Competências Técnicas Desenvolvidas
+### 🚀 Competências Técnicas Desenvolvidas
 
 > - Aplicação prática em atividades e desenvolvimento de um ecossistema corporativo para a startup de logística XPTO Express. <br> <br>
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-| Módulo / Área | Competência Técnica Desenvolvida | Principais Recursos / Comandos MySQL |
-| :--- | :--- | :--- |
-| **1. Modelagem (DDL/DML)** | Projeto de esquemas relacionais normalizados e garantia de integridade referencial entre entidades. | `CREATE DATABASE`, `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `INSERT` |
-| **2. Governança (DCL)** | Gestão de perfis de acesso e aplicação do princípio do privilégio mínimo na segurança da informação. | `GRANT`, `REVOKE`, Gerenciamento de Usuários |
-| **3. Abstração (Views)** | Simplificação de consultas complexas e blindagem de dados sensíveis de perfis não autorizados. | `CREATE VIEW` |
-| **4. Lógica Procedural (Procedures)** | Encapsulamento de rotinas operacionais, regras de negócio e tratamento de exceções transacionais. | `CREATE PROCEDURE`, `SIGNAL SQLSTATE`, Estruturas Condicionais (`IF/ELSE`) |
-| **5. Automação & Auditoria (Triggers)** | Gatilhos acoplados a eventos para automação de fluxos e rastreabilidade detalhada de logs. | `AFTER INSERT`, `AFTER DELETE`, `NEW.`, `OLD.`, `CURRENT_USER()` |
-| **6. Performance (Índices)** | Diagnóstico de gargalos em planos de execução e tunning para otimização de buscas. | `EXPLAIN`, `EXPLAIN ANALYZE`, `CREATE INDEX` |
-| **7. ETL & Processamento Volátil** | Higienização de strings e processamento analítico em memória para relatórios gerenciais. | `TEMPORARY TABLE`, `UPDATE JOIN`, Funções de Agregação (`SUM`) |
-| **8. Backup & Restore** | Geração e exportação de dumps transacionais consolidados para recuperação de desastres. | MySQL Server Dump |
-
 ---
 
-## 📂 Organização do Repositório (Mapeamento de Conceitos)
-
-Os scripts encontram-se estruturados em diretórios temáticos:
+## 📂 Scripts do Repositório
 
 - **`/01-fundamentos-ddl-dml`**: Setup inicial, criação de tabelas e cargas de dados.
 - **`/02-controle-acesso-dcl`**: Gestão de perfis e governança de segurança de usuários.
